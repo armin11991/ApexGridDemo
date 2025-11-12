@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #222222; -fx-text-fill: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.apexgrid.ModalClienteNuevoController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+
+    <Label style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #E4007C;" text="Crear/Editar Cliente" />
+
+    <GridPane hgap="10" vgap="10">
+        <!-- Nombre -->
+        <Label style="-fx-text-fill: white;" text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nombreField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Cargo -->
+        <Label style="-fx-text-fill: white;" text="Cargo:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="cargoField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Email -->
+        <Label style="-fx-text-fill: white;" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="emailField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!-- Teléfono -->
+        <Label style="-fx-text-fill: white;" text="Teléfono:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="telefonoField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <!-- Saldo pendiente -->
+        <Label style="-fx-text-fill: white;" text="Saldo pendiente:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="saldoPendienteField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button onAction="#guardarCliente" style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Guardar" />
+        <Button onAction="#cancelarCliente" style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Cancelar" />
+        <Button style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Borrar" />
+    </HBox>
+</VBox>

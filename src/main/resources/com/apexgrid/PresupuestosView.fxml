@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:id="rootPane"
+            prefHeight="768.0"
+            prefWidth="1366.0"
+            style="-fx-background-color: #000000;"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.apexgrid.PresupuestosController">
+
+    <VBox fx:id="contentArea" styleClass="sidebar"
+          style="-fx-background-color: #222222; -fx-background-radius: 15 0 0 15;"
+          prefWidth="200"
+          AnchorPane.leftAnchor="30"
+          AnchorPane.topAnchor="30"
+          AnchorPane.bottomAnchor="30"
+          spacing="10"
+          alignment="TOP_CENTER">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </padding>
+
+        <StackPane alignment="CENTER" style="-fx-background-color: #222222; -fx-padding: 15;">
+            <Circle radius="40" fill="#222222" stroke="#E4007C" strokeWidth="2" />
+            <Circle radius="15" fill="#E4007C" translateX="-10" />
+            <Circle radius="15" fill="#D7FE63" translateX="10" />
+        </StackPane>
+
+        <Label alignment="CENTER" style="-fx-text-fill: white; -fx-font-size: 19px; -fx-font-weight: bold;" text="Apex - Grid" />
+
+        <Separator style="-fx-background-color: #333333;" />
+
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10 5 10 5;">
+            <StackPane style="-fx-background-color: transparent; -fx-background-radius: 5;" minWidth="30" minHeight="30"/>
+            <Label text="Proyectos" onMouseClicked="#mostrarProyectos" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10 5 10 5; -fx-background-color: #FF0066; -fx-background-radius: 10;">
+            <StackPane style="-fx-background-color: transparent; -fx-background-radius: 5;" minWidth="30" minHeight="30"/>
+            <Label text="Presupuestos" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10 5 10 5;">
+            <StackPane style="-fx-background-color: transparent; -fx-background-radius: 5;" minWidth="30" minHeight="30"/>
+            <Label text="Clientes" onMouseClicked="#mostrarClientes" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+        </HBox>
+
+        <Region VBox.vgrow="ALWAYS" />
+
+        <Button prefWidth="120" style="-fx-background-color: #FF0066; -fx-text-fill: white; -fx-background-radius: 10;" text="Salir" onMouseClicked="#mostarSignInView"/>
+
+        <Label text="© 2025 APEX-GRID" style="-fx-text-fill: #666666; -fx-font-size: 10px;" alignment="CENTER" />
+    </VBox>
+
+    <VBox AnchorPane.leftAnchor="250"
+          AnchorPane.rightAnchor="30"
+          AnchorPane.topAnchor="30"
+          AnchorPane.bottomAnchor="30"
+          spacing="20">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="20">
+            <Region HBox.hgrow="ALWAYS" />
+
+            <VBox alignment="TOP_RIGHT" spacing="10">
+                <HBox alignment="CENTER" spacing="10">
+                    <Circle fill="#D7FE63" radius="20" />
+                    <VBox>
+                        <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Admin" />
+                        <Label style="-fx-text-fill: #AAAAAA; -fx-font-size: 12px;" text="Versión Beta" />
+                    </VBox>
+                </HBox>
+
+                <!-- Barra buscar para una futura expansión de las capacidades de la interfaz
+                <TextField prefWidth="200" promptText="Buscar..." style="-fx-background-color: #222222; -fx-background-radius: 20; -fx-text-fill: white; -fx-prompt-text-fill: #888888;">
+                    <padding>
+                        <Insets bottom="8" left="15" right="15" top="8" />
+                    </padding>
+                </TextField>
+                -->
+            </VBox>
+        </HBox>
+
+        <HBox spacing="15">
+            <Button text="Crear presupuesto" style="-fx-background-color: #FF0066; -fx-text-fill: white; -fx-background-radius: 25;" prefWidth="150" prefHeight="40" onAction="#crearPresupuesto" />
+        </HBox>
+
+        <TableView fx:id="presupuestosTableView" style="-fx-background-color: #222222; -fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="idColumnPres" prefWidth="60" text="No." style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="nombreColumnPres" prefWidth="150" text="Presupuesto" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="clienteColumnPres" prefWidth="150" text="Cliente" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="descripcionColumnPres" prefWidth="350" text="Descripción" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="fechaColumnPres" prefWidth="95" text="Fecha" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="montoColumnPres" prefWidth="80" text="Monto" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="estadoColumnPres" prefWidth="80" text="Estado" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+                <TableColumn fx:id="editarColumnPres" prefWidth="80" text="Editar" style="-fx-alignment: CENTER-LEFT; -fx-text-alignment: left;" />
+            </columns>
+            <placeholder>
+                <Label style="-fx-text-fill: #AAAAAA;" text="No data available" />
+            </placeholder>
+        </TableView>
+    </VBox>
+</AnchorPane>

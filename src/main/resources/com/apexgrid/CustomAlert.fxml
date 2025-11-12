@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="rootPane"
+           prefHeight="200"
+           prefWidth="363.0"
+           style="-fx-background-color: #1A1A1A; -fx-background-radius: 20;"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.apexgrid.CustomAlertController">
+
+    <VBox alignment="CENTER" maxHeight="160" maxWidth="300" spacing="20">
+
+        <Label fx:id="lblMensaje" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: white; -fx-font-family: 'System';" text="Aquí va el mensaje de error" wrapText="true" />
+
+        <Button fx:id="btnAceptar" onAction="#cerrarAlerta" style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Aceptar" />
+    </VBox>
+</StackPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.apexgrid.ClienteCardController"
+      style="-fx-background-color: #333333; -fx-background-radius: 10;"
+      GridPane.columnIndex="0"
+      GridPane.rowIndex="0">
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <padding><Insets top="10" right="10" bottom="5" left="10"/></padding>
+        <VBox HBox.hgrow="ALWAYS">
+            <Label fx:id="nombreLabel" text="Nombre Largo" style="-fx-text-fill: #FF0066; -fx-font-size: 14px; -fx-font-weight: bold;" />
+            <Label fx:id="cargoLabel" text="Cargo" style="-fx-text-fill: #AAAAAA; -fx-font-size: 12px;" />
+        </VBox>
+        <Button text="Editar" style="-fx-border-radius: 9; -fx-border-color: E4007C; -fx-background-color: transparent; -fx-text-fill: E4007C; -fx-font-size: 12px;" onAction="#editarCliente" />
+    </HBox>
+
+    <HBox>
+        <padding><Insets top="0" right="10" bottom="0" left="10" /></padding>
+        <Label fx:id="correoLabel" text="email@email.com" style="-fx-text-fill: white; -fx-font-size: 12px;" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox>
+        <padding><Insets top="0" right="10" bottom="0" left="10" /></padding>
+        <Label fx:id="telefonoLabel" text="+34 XXX XXX XIX" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        <Region HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <Separator style="-fx-background-color: #444444;">
+        <padding><Insets top="10" bottom="10"/></padding>
+    </Separator>
+
+    <HBox>
+        <padding><Insets top="0" right="10" bottom="10" left="10"/></padding>
+        <Label text="Saldo pendiente" style="-fx-text-fill: #CCFF00; -fx-font-size: 14px; -fx-font-weight: bold;" />
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="saldoLabel" text="15,000" style="-fx-text-fill: #CCFF00; -fx-font-size: 14px; -fx-font-weight: bold;" />
+    </HBox>
+</VBox>

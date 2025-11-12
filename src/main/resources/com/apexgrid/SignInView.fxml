@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.apexgrid.SignInController"
+            fitToWidth="true" fitToHeight="true"
+            style=".viewport {-fx-background-color: #2A2A2A;} -fx-background-color: #2A2A2A;"
+            pannable="true">
+   <content>
+      <StackPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #000000;">
+          <children>
+              <!-- com.apexgrid.Main contenedor centrado en la ventana -->
+              <HBox alignment="CENTER" maxHeight="600.0" maxWidth="1000.0" style="-fx-background-radius: 20; -fx-background-color: transparent;" StackPane.alignment="CENTER">
+                  <children>
+                      <Pane maxHeight="600.0" maxWidth="500.0">
+                          <children>
+                              <!-- Forma personalizada con esquinas redondeadas a la izquierda -->
+                              <SVGPath fill="#2A2A2A" content="M 40 0 Q 0 0 0 40 V 560 Q 0 600 40 600 H 500 V 0 Z" />
+
+                              <!-- Círculos brillantes con opacidad máxima -->
+                              <Circle radius="12" fill="#E4007C" opacity="1" layoutX="150" layoutY="100"/>
+                              <Circle radius="18" fill="#D7FE63" opacity="1" layoutX="200" layoutY="150"/>
+                              <Circle radius="24" fill="#E4007C" opacity="1" layoutX="300" layoutY="400"/>
+                              <Circle radius="20" fill="#D7FE63" opacity="1" layoutX="400" layoutY="350"/>
+                              <Circle radius="15" fill="#E4007C" opacity="1" layoutX="250" layoutY="500"/>
+                              <Circle radius="10" fill="#D7FE63" opacity="1" layoutX="350" layoutY="200"/>
+                              <Circle radius="8" fill="#E4007C" opacity="1" layoutX="100" layoutY="250"/>
+                              <Circle radius="6" fill="#D7FE63" opacity="1" layoutX="50" layoutY="400"/>
+                              <Circle radius="16" fill="#E4007C" opacity="1" layoutX="450" layoutY="120"/>
+                              <Circle radius="18" fill="#D7FE63" opacity="1" layoutX="200" layoutY="500"/>
+
+                              <!-- Círculos vacíos (solo contornos) -->
+                              <Circle radius="6" fill="transparent" stroke="#E4007C" opacity="1" layoutX="180" layoutY="250"/>
+                              <Circle radius="8" fill="transparent" stroke="#D7FE63" opacity="1" layoutX="320" layoutY="430"/>
+                              <Circle radius="5" fill="transparent" stroke="#E4007C" opacity="1" layoutX="400" layoutY="500"/>
+                              <Circle radius="7" fill="transparent" stroke="#D7FE63" opacity="1" layoutX="250" layoutY="150"/>
+                              <Circle radius="10" fill="transparent" stroke="#E4007C" opacity="1" layoutX="120" layoutY="400"/>
+                              <Circle radius="14" fill="transparent" stroke="#D7FE63" opacity="1" layoutX="360" layoutY="100"/>
+                              <Circle radius="18" fill="transparent" stroke="#E4007C" opacity="1" layoutX="300" layoutY="300"/>
+                              <Circle radius="20" fill="transparent" stroke="#D7FE63" opacity="1" layoutX="420" layoutY="200"/>
+                              <Circle radius="15" fill="transparent" stroke="#E4007C" opacity="1" layoutX="180" layoutY="350"/>
+                              <Circle radius="9" fill="transparent" stroke="#D7FE63" opacity="1" layoutX="100" layoutY="500"/>
+                              <Circle radius="7" fill="transparent" stroke="#E4007C" opacity="1" layoutX="380" layoutY="450"/>
+                              <Circle radius="8" fill="transparent" stroke="#D7FE63" opacity="1" layoutX="250" layoutY="200"/>
+
+                              <!-- Líneas de circuito dinámicas -->
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="2" opacity="1"
+                                       content="M 80 100 H 220 V 200 H 300" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="2" opacity="1"
+                                       content="M 120 150 V 250 H 400" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="2.5" opacity="1"
+                                       content="M 100 300 V 400 H 500" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="2" opacity="1"
+                                       content="M 200 100 H 450 V 250" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="2.5" opacity="1"
+                                       content="M 150 300 H 350 V 500" />
+
+                              <!-- Líneas de conexión para densificar el espacio -->
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1" opacity="1"
+                                       content="M 50 100 H 200" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1.5" opacity="1"
+                                       content="M 150 200 H 500" />
+
+                              <!-- Más líneas rosas y verdes para crear el flujo -->
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1" opacity="1"
+                                       content="M 50 250 H 150" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1.5" opacity="1"
+                                       content="M 300 200 H 400" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1.2" opacity="1"
+                                       content="M 180 350 H 320" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1" opacity="1"
+                                       content="M 200 100 H 220 V 250" />
+
+                              <!-- Líneas adicionales para más densidad -->
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1" opacity="1"
+                                       content="M 100 150 V 250" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1" opacity="1"
+                                       content="M 150 400 H 300" />
+
+                              <!-- Superposición de cuadrícula suave (más densa, solo líneas grises) -->
+                              <SVGPath fill="transparent" stroke="#B0B0B0" strokeWidth="0.7" opacity="0.2"
+                                       content="M 50 0 V 600 M 100 0 V 600 M 150 0 V 600 M 200 0 V 600 M 250 0 V 600
+                          M 300 0 V 600 M 350 0 V 600 M 400 0 V 600 M 450 0 V 600" />
+
+                              <SVGPath fill="transparent" stroke="#B0B0B0" strokeWidth="0.7" opacity="0.2"
+                                       content="M 0 50 H 500 M 0 150 H 500 M 0 250 H 500 M 0 350 H 500 M 0 450 H 500" />
+
+                              <!-- Más círculos dispersos para efectos visuales -->
+                              <Circle radius="22" fill="#E4007C" opacity="1" layoutX="80" layoutY="500"/>
+                              <Circle radius="30" fill="#D7FE63" opacity="1" layoutX="420" layoutY="250"/>
+                              <Circle radius="17" fill="#E4007C" opacity="1" layoutX="180" layoutY="400"/>
+
+                              <!-- Líneas de conexión adicionales entre los círculos -->
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1.5" opacity="1"
+                                       content="M 150 100 H 180" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1" opacity="1"
+                                       content="M 220 150 H 250" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1.5" opacity="1"
+                                       content="M 300 150 H 350" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1" opacity="1"
+                                       content="M 350 100 H 450" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1.5" opacity="1"
+                                       content="M 400 350 H 450" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1" opacity="1"
+                                       content="M 100 250 H 150" />
+                              <SVGPath fill="transparent" stroke="#E4007C" strokeWidth="1" opacity="1"
+                                       content="M 200 500 H 250" />
+                              <SVGPath fill="transparent" stroke="#D7FE63" strokeWidth="1.5" opacity="1"
+                                       content="M 300 400 H 350" />
+                          </children>
+                      </Pane>
+
+                      <!-- Lado derecho - Formulario de inicio de sesión con esquinas derechas redondeadas -->
+                      <VBox alignment="CENTER" maxHeight="600.0" maxWidth="500.0" minWidth="300.0" spacing="25.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 0 20 20 0;">
+                          <children>
+                              <!-- Logo circle -->
+                              <StackPane alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 15;">
+                                  <Circle radius="40" fill="#222222" stroke="#E4007C" strokeWidth="2" />
+                                  <Circle radius="15" fill="#E4007C" translateX="-10" />
+                                  <Circle radius="15" fill="#D7FE63" translateX="10" />
+                              </StackPane>
+
+                              <!-- App Logo/Title -->
+                              <Label style="-fx-font-weight: bold; -fx-font-size: 36px !important;" text="Apex - Grid" textFill="#E4007C">
+                                  <font>
+                                      <Font name="System Bold"/>
+                                  </font>
+                                  <VBox.margin>
+                                      <Insets bottom="30.0" />
+                                  </VBox.margin>
+                              </Label>
+
+                              <!-- Login Form -->
+                              <VBox alignment="CENTER" spacing="25.0">
+                                  <children>
+                                      <!-- Campo de contraseña con texto en lugar de etiqueta -->
+                                      <TextField fx:id="usernameField" maxWidth="420.0" promptText="Usuario" style="-fx-background-color: #2A2A2A; -fx-text-fill: white; -fx-prompt-text-fill: #808080; -fx-background-radius: 8; -fx-padding: 12;">
+                                          <font>
+                                              <Font size="14.0" />
+                                          </font>
+                                      </TextField>
+
+                                      <!-- Password field with prompt text instead of label -->
+                                      <PasswordField fx:id="passwordField" maxWidth="420.0" promptText="Contraseña" style="-fx-background-color: #2A2A2A; -fx-text-fill: white; -fx-prompt-text-fill: #808080; -fx-background-radius: 8; -fx-padding: 12;">
+                                          <font>
+                                              <Font size="14.0" />
+                                          </font>
+                                      </PasswordField>
+
+                                      <!-- Botón primero, luego enlace de olvido de contraseña -->
+                                      <Button fx:id="signInButton" maxWidth="420.0" mnemonicParsing="false" onAction="#handleSignIn" style="-fx-background-color: #E4007C; -fx-background-radius: 8;" text="Iniciar Sesión" textFill="WHITE">
+                                          <font>
+                                              <Font size="16.0" />
+                                          </font>
+                                          <padding>
+                                              <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                                          </padding>
+                                      </Button>
+
+                                      <HBox alignment="CENTER">
+                                          <children>
+                                              <Hyperlink fx:id="olvidasteButton"
+                                                         text="¿Olvidaste tu contraseña?"
+                                                         onAction="#mostrarAlertaConCredenciales"
+                                                         textFill="WHITE" />
+                                          </children>
+                                      </HBox>
+                                  </children>
+                              </VBox>
+                          </children>
+                          <padding>
+                              <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+                          </padding>
+                          <effect>
+                              <DropShadow color="#00000080" radius="10.0" spread="0.05" />
+                          </effect>
+                      </VBox>
+                  </children>
+                  <effect>
+                      <DropShadow color="#00000080" radius="15.0" spread="0.1" />
+                  </effect>
+              </HBox>
+          </children>
+      </StackPane>
+   </content>
+</ScrollPane>

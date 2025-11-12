@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #222222; -fx-text-fill: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexgrid.ModalProyectoNuevoController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #E4007C;" text="Crear/Editar Proyecto" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label style="-fx-text-fill: white;" text="Nombre del Proyecto:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nombreProyectoField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label style="-fx-text-fill: white;" text="Cliente:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="clienteField" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label style="-fx-text-fill: white;" text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextArea fx:id="descripcionArea" style="-fx-background-color: #333333; -fx-text-fill: black; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label style="-fx-text-fill: white;" text="Fecha de Inicio:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <DatePicker fx:id="fechaInicioPicker" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label style="-fx-text-fill: white;" text="Estado:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <ComboBox fx:id="estadoComboBox" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button onAction="#guardarProyecto" style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Guardar" />
+        <Button onAction="#cancelarProyecto" style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Cancelar" />
+        <Button style="-fx-background-color: #E4007C; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Borrar" />
+    </HBox>
+</VBox>
